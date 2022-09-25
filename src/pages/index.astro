@@ -1,7 +1,15 @@
 ---
+import WebsiteLayout from "../components/WebsiteLayout";
 import Layout from "../layouts/Layout.astro";
+import HomeHero from "../components/Home/HomeHero";
+import HomeDividerOne from "../components/Home/HomeDividerOne";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main></main>
+  <main>
+    <WebsiteLayout client:load>
+      <HomeHero />
+      <HomeDividerOne />
+    </WebsiteLayout>
+  </main>
 </Layout>
