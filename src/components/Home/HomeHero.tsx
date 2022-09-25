@@ -1,4 +1,5 @@
 import * as React from "react";
+import Button from "../Button";
 
 export interface IHomeHeroProps {}
 
@@ -20,14 +21,14 @@ export default function HomeHero(props: IHomeHeroProps) {
         <div className="mx-auto h-full px-4 py-4 pt-10 md:py-40 sm:max-w-xl md:max-w-full md:px-8 lg:max-w-screen-xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 flex flex-col items-center justify-between lg:flex-row z-10">
             <div className="w-full min-h-full z-20 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 mb-4 lg:mb-0 hidden md:grid">
-              <img
+              {/* <img
                 className=" w-fullh-full z-20 object-cover"
                 src=""
                 alt="BFG Interactive Logo"
                 loading="lazy"
                 width="766px"
                 height="176px"
-              ></img>
+              ></img> */}
             </div>
             <div className="z-20 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2">
               <div className="lg:max-w-3xl text-[#CCCCCC]  bg-[rgb(0,0,0,0.4)] p-4">
@@ -53,14 +54,14 @@ export default function HomeHero(props: IHomeHeroProps) {
                   </span>{" "}
                 </h2>
               </div>
-              <div className="mt-2 lg:mt-6 flex flex-col items-start justify-items-start md:flex-row text-[#CCCCCC]">
-                {/* <Button link="/" title="Start now" /> */}
+              <div className="p-4  flex flex-col items-start justify-items-start md:flex-row text-[#CCCCCC] bg-[rgb(0,0,0,0.4)]">
+                <Button link="/">Join Now</Button>
                 <a
-                  href="/calgary-web-design-company/web-development/#serviceSteps"
+                  href="/about"
                   aria-label=""
-                  className="group inline-flex items-center uppercase px-4 pl-0 self-center md:pl-4 mt-4 md:mt-1 hover:underline font-medium text-sm lg:text-base"
+                  className="group inline-flex md:items-center uppercase px-4 pl-0 self-center md:pl-4 mt-4 md:mt-1 hover:underline font-medium text-sm lg:text-base"
                 >
-                  How our websites generate business for you
+                  Learn more
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="group-hover:translate-x-2 ml-4 h-6 w-6 transition-transform"

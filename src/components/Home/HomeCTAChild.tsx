@@ -22,9 +22,9 @@ export default function HomeCTAChild(props: IHomeCTAChildProps) {
         width="300px"
         height="300px"
       />
-      <div className="">
+      <div className="p-4">
         <h3 className="text-4xl">{heading}</h3>
-        <p className="mt-6 text-base">{text}</p>
+        <p className="my-4 text-base">{text}</p>
         <Button link={redirectLink}> Learn More</Button>
       </div>
     </div>
