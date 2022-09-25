@@ -3,6 +3,9 @@ import WebsiteLayout from "../components/WebsiteLayout";
 import Layout from "../layouts/Layout.astro";
 import HomeHero from "../components/Home/HomeHero";
 import HomeDividerOne from "../components/Home/HomeDividerOne";
+import HomeCTA from "../components/Home/HomeCTA";
+
+import HomeDividerTwo from "../components/Home/HomeDividerTwo";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,6 +13,8 @@ import HomeDividerOne from "../components/Home/HomeDividerOne";
     <WebsiteLayout client:load>
       <HomeHero />
       <HomeDividerOne />
+      <HomeCTA />
+      <HomeDividerTwo />
     </WebsiteLayout>
   </main>
 </Layout>
