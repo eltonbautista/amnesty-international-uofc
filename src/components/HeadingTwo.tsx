@@ -8,7 +8,9 @@ export interface IHeadingTwoProps {
 export default function HeadingTwo(props: IHeadingTwoProps) {
   const { children, textColor } = props;
   return (
-    <h2 className={`text-3xl md:text-4xl lg:text-5xl ${textColor}`}>
+    <h2
+      className={`text-3xl md:text-4xl lg:text-5xl font-semibold ${textColor}`}
+    >
       {children}
     </h2>
   );
