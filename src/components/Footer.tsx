@@ -4,7 +4,7 @@ export interface IFooterProps {}
 
 export default function Footer(props: IFooterProps) {
   return (
-    <footer className="lg:grid lg:grid-cols-5">
+    <footer className="lg:grid lg:grid-cols-5 bg-base-200">
       <aside className="hidden lg:relative lg:col-span-2 lg:block">
         <img
           alt="Amnesty International"
@@ -17,25 +17,24 @@ export default function Footer(props: IFooterProps) {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
             <p className="font-medium">
-              <span className="text-xs tracking-widest uppercase"> Call </span>
+              <span className="text-xs tracking-widest uppercase"> Email </span>
 
               <a
-                className="block text-2xl sm:text-3xl hover:opacity-75"
-                href=""
+                className="block text-lg md:text-3xl hover:opacity-75"
+                href="mailto:aiuofc@gmail.com"
               >
-                0123456789
+                aiuofc@gmail.com
               </a>
             </p>
 
-            <ul className="mt-8 space-y-2 text-sm">
-              <li>Monday to Friday: 10am - 5pm</li>
-              <li>Weekend: 10am - 3pm</li>
+            <ul className="mt-1 md:mt-8 space-y-2 text-sm">
+              <li>Join us in advocating for human rights.</li>
             </ul>
 
-            <div className="flex gap-3 mt-16">
+            <div className="flex gap-3 mt-8 md:mt-12">
               <a
                 className="p-2 border rounded-full border-white/25 hover:opacity-75"
-                href=""
+                href="https://www.facebook.com/aiuofc/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -57,7 +56,7 @@ export default function Footer(props: IFooterProps) {
 
               <a
                 className="p-2 border rounded-full border-white/25 hover:opacity-75"
-                href=""
+                href="https://www.instagram.com/aiuofc/?hl=en"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -79,23 +78,25 @@ export default function Footer(props: IFooterProps) {
 
               <a
                 className="p-2 border rounded-full border-white/25 hover:opacity-75"
-                href=""
+                href="https://discord.com/invite/VtkfkQqkep"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="sr-only"> Twitter </span>
+                <span className="sr-only"> Discord </span>
 
                 <svg
-                  className="w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
                   fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
+                  className="bi bi-discord"
+                  viewBox="0 0 16 16"
                 >
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
                 </svg>
               </a>
 
-              <a
+              {/* <a
                 className="p-2 border rounded-full border-white/25 hover:opacity-75"
                 href=""
                 target="_blank"
@@ -137,18 +138,41 @@ export default function Footer(props: IFooterProps) {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <p className="font-medium">Support</p>
+              <p className="font-medium">About Us</p>
 
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
                 <a className="hover:opacity-75" href="">
                   {" "}
+                  About AIUOFC{" "}
+                </a>
+                <a className="hover:opacity-75" href="">
+                  {" "}
+                  Join Us{" "}
+                </a>
+                <a className="hover:opacity-75" href="">
+                  {" "}
                   Contact{" "}
+                </a>
+                <a className="hover:opacity-75" href="">
+                  {" "}
+                  Donate{" "}
+                </a>
+              </nav>
+            </div>
+
+            <div>
+              <p className="font-medium">Helpful Links</p>
+
+              <nav className="flex flex-col mt-4 space-y-2 text-sm">
+                <a className="hover:opacity-75" href="">
+                  {" "}
+                  Blog{" "}
                 </a>
                 <a className="hover:opacity-75" href="">
                   {" "}
@@ -156,41 +180,18 @@ export default function Footer(props: IFooterProps) {
                 </a>
                 <a className="hover:opacity-75" href="">
                   {" "}
-                  Live Chat{" "}
+                  Volunteering{" "}
                 </a>
                 <a className="hover:opacity-75" href="">
                   {" "}
-                  Forums{" "}
-                </a>
-              </nav>
-            </div>
-
-            <div>
-              <p className="font-medium">Products</p>
-
-              <nav className="flex flex-col mt-4 space-y-2 text-sm">
-                <a className="hover:opacity-75" href="">
-                  {" "}
-                  1to1 Coaching{" "}
-                </a>
-                <a className="hover:opacity-75" href="">
-                  {" "}
-                  Lesson Plans{" "}
-                </a>
-                <a className="hover:opacity-75" href="">
-                  {" "}
-                  Meal Plans{" "}
-                </a>
-                <a className="hover:opacity-75" href="">
-                  {" "}
-                  Gym Sessions{" "}
+                  Research{" "}
                 </a>
               </nav>
             </div>
           </div>
         </div>
 
-        <div className="pt-12 mt-12 border-t border-gray-800">
+        <div className="pt-12 mt-12 border-t border-secondary">
           <div className="text-sm sm:items-center sm:justify-between sm:flex">
             <div className="flex gap-3">
               <a className="hover:opacity-75" href="">
@@ -207,17 +208,20 @@ export default function Footer(props: IFooterProps) {
               </a>
             </div>
 
-            <p className="mt-4 sm:mt-0">&copy; 2022 Company Name.</p>
+            <p className="mt-4 sm:mt-0">
+              &copy; 2022 Amnesty International University of Calgary
+            </p>
           </div>
 
           <p className="mt-8 text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            mollitia quia quod repellendus. Porro harum, odio dolore
-            perspiciatis praesentium provident esse consequatur quibusdam
-            aperiam, cupiditate omnis modi in quasi? In, maxime odio vel
-            repellat sed earum? Debitis quaerat facilis animi. Odio natus
-            nostrum laboriosam impedit magnam praesentium asperiores consectetur
-            ipsum.
+            Website created by{" "}
+            <a
+              href="https://bfginteractive.ca/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              BFG Interactive
+            </a>
           </p>
         </div>
       </div>
