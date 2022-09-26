@@ -6,7 +6,7 @@ export interface IHomeHeroProps {}
 export default function HomeHero(props: IHomeHeroProps) {
   return (
     <>
-      <section className="relative pb-28 lg:pt-0 pt-12">
+      <section className="relative pb-28 lg:pt-0">
         <div className="max-h-screen w-full overflow-hidden">
           <video
             className="absolute w-full h-full lg:h-[90vh] xxl:h-[65vh] max-h-screen max-w-full object-cover "
@@ -19,7 +19,7 @@ export default function HomeHero(props: IHomeHeroProps) {
           </video>
         </div>
 
-        <div className="mx-auto h-full px-4 py-4 pt-10 md:py-40 sm:max-w-xl md:max-w-full md:px-8 lg:max-w-screen-xl lg:px-8">
+        <div className="mx-auto h-full px-4 py-4 pt-20 md:py-40 sm:max-w-xl md:max-w-full md:px-8 lg:max-w-screen-xl lg:px-8">
           <div className="lg:grid flex flex-col items-center z-10">
             {/* <div className="w-full min-h-full z-20 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 mb-4 lg:mb-0 hidden md:grid">
               <img

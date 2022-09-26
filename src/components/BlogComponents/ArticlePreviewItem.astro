@@ -1,0 +1,51 @@
+---
+const {
+  articleDate,
+  articleTitle,
+  articleDescription,
+  cTA,
+  articleLink,
+  articleImgSrc,
+  articleImgAlt,
+} = Astro.props;
+---
+
+<article
+  class="flex flex-col items-center gap-4 md:flex-row lg:gap-6 bg-base-200 p-6 rounded-xl"
+>
+  <a
+    href={"/blogs/" + articleLink}
+    class="group relative block h-56 w-full shrink-0 self-start overflow-hidden rounded-lg shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40"
+  >
+    <img
+      src={articleImgSrc}
+      loading="lazy"
+      alt={articleImgAlt}
+      class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+    />
+  </a>
+
+  <div class="flex flex-col gap-2">
+    <span class="text-sm">{articleDate}</span>
+
+    <h2 class="text-xl font-bold">
+      <a
+        href={"/blogs/" + articleLink}
+        class="transition duration-100 hover:text-rose-500 active:text-rose-600"
+        >{articleTitle}
+      </a>
+    </h2>
+
+    <p class="">
+      {articleDescription}
+    </p>
+
+    <div>
+      <a
+        href={"/blogs/" + articleLink}
+        class="font-semibold text-rose-500 transition duration-100 hover:text-rose-600 active:text-rose-700"
+        >{cTA ? cTA : "Read more"}
+      </a>
+    </div>
+  </div>
+</article>

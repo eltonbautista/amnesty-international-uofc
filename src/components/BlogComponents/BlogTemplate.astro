@@ -1,0 +1,75 @@
+---
+import * as articleList from "../../pages/blogs.md";
+import Button from "../Button";
+const {
+  articleNumber,
+  articleTags,
+  articleHeadingStatement,
+  articleQuote,
+  articleQuoteAuthor,
+} = Astro.props.content;
+let index =
+  articleList.frontmatter.articleListObjects.length - (articleNumber + 1);
+---
+
+<section>
+  <div class="lg:h-[72px] bg-black"></div>
+  <div class="">
+    <article class="pt-2 md:pt-14 bg-base-100">
+      <header class="mx-auto max-w-screen-xl rounded-t-lg p-8">
+        <p class="">
+          Published {
+            articleList.frontmatter.articleListObjects[index].articleDate
+          }
+        </p>
+        <h1 class="mt-2 text-4xl font-bold sm:text-5xl">
+          {articleList.frontmatter.articleListObjects[index].articleTitle}
+        </h1>
+        <p class="mt-6 text-lg">
+          {articleList.frontmatter.articleListObjects[index].articleDescription}
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          {
+            articleTags.map((tag: string, i: number) => {
+              return (
+                <button class="relative inline-block text-sm font-medium group focus:outline-none focus:ring">
+                  <span
+                    class:list={[
+                      "absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 group-hover:translate-y-0 group-hover:translate-x-0",
+                    ]}
+                  />
+
+                  <span
+                    class:list={[
+                      "relative block px-8 py-3 border border-current hover:bg-accent",
+                    ]}
+                  >
+                    {tag}
+                  </span>
+                </button>
+              );
+            })
+          }
+        </div>
+        <img
+          class="-z-10 absolute top-0 left-0 mt-10 h-96 w-full object-cover"
+          src="https://images.unsplash.com/photo-1504672281656-e4981d70414b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt=""
+        />
+      </header>
+
+      <div
+        class="mx-auto max-w-screen-xl space-y-12 rounded-b-lg px-8 pt-10 pb-20 text-lg tracking-wide sm:"
+      >
+        <h2 class="text-2xl font-semibold">{articleHeadingStatement}</h2>
+        <blockquote class="max-w-lg border-l-4 px-4">
+          {articleQuote}
+          <span class="whitespace-nowrap text-sm">— {articleQuoteAuthor}</span>
+        </blockquote>
+        <div class="max-w-screen-lg">
+          <slot />
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

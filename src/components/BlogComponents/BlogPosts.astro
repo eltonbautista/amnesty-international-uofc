@@ -1,0 +1,64 @@
+---
+import ArticlePreviewItem from "./ArticlePreviewItem.astro";
+import * as articles from "../../pages/blogs.md";
+import ContactForm from "../ContactForm";
+const { content } = Astro.props;
+---
+
+<section class="py-20 sm:py-24 lg:py-32 bg-base-100">
+  <div class="mx-auto max-w-screen-xl px-4 md:px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="mb-10 md:mb-16">
+      <h2 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold md:mb-6">
+        AIUOFC Blogs
+      </h2>
+
+      <p class="max-w-screen-md md:text-lg">
+        We write blogs about Calgary, Technology, and Finance. Subscribe to our
+        Newsletter to receive updates on newly released articles!
+      </p>
+    </div>
+    <!-- /Heading -->
+    <div
+      class="grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 xl:grid-cols-2 xl:gap-16"
+    >
+      <!-- Article -->
+      {
+        articles.frontmatter.articleListObjects.map(
+          (article: any, index: number) => {
+            const {
+              articleDate,
+              articleTitle,
+              articleDescription,
+              articleLink,
+              articleImgSrc,
+              articleImgAlt,
+            } = article;
+            return (
+              <ArticlePreviewItem
+                articleDate={articleDate}
+                articleTitle={articleTitle}
+                articleDescription={articleDescription}
+                articleLink={
+                  articles.frontmatter.articleListObjects.length -
+                  (index + 1) +
+                  "-" +
+                  articleTitle.toLowerCase().replaceAll(" ", "-")
+                }
+                articleImgSrc={articleImgSrc}
+                articleImgAlt={articleImgAlt}
+              />
+            );
+          }
+        )
+      }
+      <!-- /Article -->
+    </div>
+  </div>
+</section>
+<section class="pt-8 text-secondary-content">
+  <!-- <p class="text-center text-sm md:text-base lg:text-lg">
+    Like what you see? Get in touch!
+  </p> -->
+  <ContactForm />
+</section>

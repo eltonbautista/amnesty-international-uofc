@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WebsiteLayout from "../components/WebsiteLayout";
+// import ServicesHero from "../components/Services/ServicesHero.astro";
+import BlogPosts from "../components/BlogComponents/BlogPosts.astro";
+import ContactForm from "../components/ContactForm";
+
+const { content } = Astro.props;
+---
+
+<Layout title="Calgary Web Design Blogs">
+  <WebsiteLayout client:load>
+    <div class="lg:h-[72px] w-full bg-black"></div>
+    <main class="bg-neutral">
+      <BlogPosts content={content} />
+    </main>
+  </WebsiteLayout>
+</Layout>
