@@ -20,11 +20,11 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
   return (
     <header
       ref={navRef}
-      className={`grid justify-items-center fixed z-50 text-white w-full pb-2 ${
-        scrollPosition > 0 ? "bg-black" : "lg:bg-transparent"
+      className={`grid justify-items-center fixed bg-black z-50 text-white w-full pb-2 ${
+        scrollPosition > 0 ? "bg-black" : "md:bg-transparent"
       }`}
     >
-      <details className="group transition-all duration-150 h-10 open:h-80 overflow-hidden w-full md:hidden text-sm">
+      <details className="group transition-all duration-150 h-10 open:h-72 overflow-hidden w-full md:hidden text-sm">
         <summary className="transition-all duration-500  flex cursor-pointer items-center rounded-lg px-4 py-2 ">
           <span className="sm:max-w-[200px] ">
             <img
@@ -38,7 +38,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
             {/* <span className="sm:hidden font-normal text-sm">AIUOFC</span> */}
           </span>
 
-          <span className="ml-auto grid grid-cols-2 gap-4">
+          <span className="ml-auto grid grid-cols-2 gap-7">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -56,7 +56,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               <input
                 className="opacity-0"
                 type="checkbox"
-                data-toggle-theme="bumblebee,luxury"
+                data-toggle-theme="luxury,bumblebee"
                 data-act-class="ACTIVECLASS"
               />
               <svg
@@ -82,15 +82,15 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
           <NavbarChild link="/#about" text="About" />
           <NavbarChild
             link="/calgary-web-design-company/web-development"
-            text="Web Development & Design"
+            text="Blog"
           />
+          {/* <NavbarChild
+            link="/calgary-web-design-company/web-development"
+            text="Contact"
+          /> */}
           <NavbarChild
             link="/calgary-web-design-company/web-development"
-            text="Search Engine Optimization (SEO)"
-          />
-          <NavbarChild
-            link="/calgary-web-design-company/web-development"
-            text="Social Media Marketing & Management"
+            text="Events"
           />
           <NavbarChild link="#contact" text="Contact" />
         </nav>
@@ -120,7 +120,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               <a href="/#about">About</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact">Blog</a>
             </li>
           </ul>
           <div className="dropdown dropdown-end">
@@ -128,7 +128,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               tabIndex={0}
               className="btn btn-ghost rounded-btn normal-case font-normal text-base"
             >
-              Services
+              Join
               <svg
                 className="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,18 +145,11 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
             >
               <li>
                 <a href="/calgary-web-design-company/web-development">
-                  Web Development & Design
+                  Contact
                 </a>
               </li>
               <li>
-                <a href="/calgary-web-design-company/web-development">
-                  Search Engine Optimization
-                </a>
-              </li>
-              <li>
-                <a href="/calgary-web-design-company/web-development">
-                  Social Media Marketing
-                </a>
+                <a href="/calgary-web-design-company/web-development">Events</a>
               </li>
             </ul>
           </div>
@@ -166,7 +159,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               className="opacity-0"
               type="checkbox"
               id="theme"
-              data-toggle-theme="bumblebee,luxury"
+              data-toggle-theme="luxury,bumblebee"
               data-act-class="ACTIVECLASS"
             />
             <svg
