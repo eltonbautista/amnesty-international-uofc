@@ -35,10 +35,10 @@ module.exports = {
     rtl: false,
     prefix: "",
     themes: [
-      "light",
+      "bumblebee",
       "dark",
       "cupcake",
-      "bumblebee",
+      "light",
       "emerald",
       "corporate",
       "synthwave",
