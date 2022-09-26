@@ -6,10 +6,10 @@ export interface IHomeHeroProps {}
 export default function HomeHero(props: IHomeHeroProps) {
   return (
     <>
-      <section className="relative pb-28 lg:pt-0">
+      <section className="relative pb-28 lg:pt-0 pt-12">
         <div className="max-h-screen w-full overflow-hidden">
           <video
-            className="absolute w-full h-full lg:h-[85vh] xxl:h-[65vh] max-h-screen max-w-full object-cover "
+            className="absolute w-full h-full lg:h-[90vh] xxl:h-[65vh] max-h-screen max-w-full object-cover "
             autoPlay
             loop
             muted
