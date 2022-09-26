@@ -23,28 +23,27 @@ export default function HomeCTA(props: IHomeCTAProps) {
             imgSrc="https://images.pexels.com/photos/2369217/pexels-photo-2369217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             position="md:order-2"
             redirectLink="about"
-            text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            ipsa delectus quod?"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis similique, cupiditate eligendi quis, aliquam, reiciendis voluptas quod amet praesentium porro ea nisi consectetur necessitatibus totam incidunt illum quia qui quo.
+            "
           />
 
           <HomeCTAChild
-            heading="Who we are"
+            heading="What we do"
             imgAlt="freedom"
             imgSrc="https://images.pexels.com/photos/2990644/pexels-photo-2990644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             position="md:ml-0"
             redirectLink="about"
-            text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            ipsa delectus quod?"
+            text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis similique, cupiditate eligendi quis, aliquam, reiciendis voluptas quod amet praesentium porro ea nisi consectetur necessitatibus totam incidunt illum quia qui quo.
+            "
           />
-
           <HomeCTAChild
-            heading="Who we are"
+            heading="What you can do"
             imgAlt="freedom"
             imgSrc="https://images.pexels.com/photos/2990647/pexels-photo-2990647.jpeg?cs=srgb&dl=pexels-markus-spiske-2990647.jpg&fm=jpg"
             position="md:order-2"
             redirectLink="about"
-            text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            ipsa delectus quod?"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis similique, cupiditate eligendi quis, aliquam, reiciendis voluptas quod amet praesentium porro ea nisi consectetur necessitatibus totam incidunt illum quia qui quo.
+            "
           />
         </div>
       </div>

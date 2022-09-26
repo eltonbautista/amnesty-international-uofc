@@ -8,7 +8,7 @@ export default function HomeTestimonials(props: IHomeTestimonialsProps) {
   return (
     <section className="py-12 sm:py-16 lg:py-32">
       <div className="relative mx-auto lg:max-w-screen-xl px-4 md:px-6 lg:px-8">
-        <span className="absolute -right-5 -bottom-6 -z-10 hidden rounded-full bg-secondary text-white p-6 text-9xl opacity-40 md:block">
+        <span className="absolute -right-5 -bottom-6 -z-10 hidden rounded-full bg-secondary text-white p-6 text-9xl opacity-40 xl:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
