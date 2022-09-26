@@ -23,6 +23,7 @@ module.exports = {
         Questrial: ["Questrial", "sans-serif"],
         Montserrat: ["Montserrat", "sans-serif"],
         Inter: ["Inter", "sans-serif"],
+        Lato: ["Lato", "sans-serif"],
       },
     },
   },
