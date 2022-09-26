@@ -21,7 +21,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
     <header
       ref={navRef}
       className={`grid justify-items-center fixed bg-black z-50 text-white w-full pb-2 ${
-        scrollPosition > 0 ? "bg-black" : "md:bg-transparent"
+        scrollPosition > 0 ? "bg-black" : " md:bg-[rgb(0,0,0,0.2)]"
       }`}
     >
       <details className="group transition-all duration-150 h-10 open:h-72 overflow-hidden w-full md:hidden text-sm">
@@ -120,7 +120,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               <a href="/#about">About</a>
             </li>
             <li>
-              <a href="#contact">Blog</a>
+              <a href="blogs">Blog</a>
             </li>
           </ul>
           <div className="dropdown dropdown-end">
@@ -141,7 +141,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
             </label>
             <ul
               tabIndex={0}
-              className="menu dropdown-content p-2 shadow bg-neutral rounded-box w-64 mt-4"
+              className="menu dropdown-content p-2 shadow rounded-box w-64 mt-4 bg-neutral"
             >
               <li>
                 <a href="/calgary-web-design-company/web-development">
