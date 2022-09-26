@@ -4,7 +4,7 @@ import Button from "./Button";
 export default function ContactForm() {
   return (
     <section
-      className="grid justify-items-center py-8 lg:py-12 bg-base-200 px-4 md:px-6 lg:px-8"
+      className="grid justify-items-center py-8 lg:pt-12 bg-base-200 px-4 md:px-6 lg:px-8"
       id="contact"
     >
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center mb-3 lg:mb-12 max-w-screen-md">
