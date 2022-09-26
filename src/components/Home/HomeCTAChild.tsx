@@ -16,11 +16,11 @@ export default function HomeCTAChild(props: IHomeCTAChildProps) {
   return (
     <div className="justify-center grid lg:grid-cols-2 place-items-center md:flex-row">
       <img
-        className={`lg:max-w-lg w-full lg:object-cover object-contain ${position} md:object-left`}
+        className={`lg:max-w-2xl w-full lg:object-cover object-contain ${position} md:object-left`}
         src={imgSrc}
         alt={imgAlt}
-        width="300px"
-        height="300px"
+        width="400px"
+        height="400px"
       />
       <div className="p-4">
         <h3 className="text-4xl">{heading}</h3>
