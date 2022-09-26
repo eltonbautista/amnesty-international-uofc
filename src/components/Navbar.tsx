@@ -4,21 +4,19 @@ export interface INavbarProps {}
 
 const Navbar: React.FC<INavbarProps> = function Navbar({}) {
   return (
-    <header className="grid justify-items-center lg:absolute z-50 bg-neutral lg:bg-transparent w-full pb-2">
+    <header className="grid justify-items-center sticky top-0 z-50 bg-black text-white w-full pb-2">
       <details className="group transition-all duration-150 h-10 open:h-80 overflow-hidden w-full md:hidden text-sm">
         <summary className="transition-all duration-500  flex cursor-pointer items-center rounded-lg px-4 py-2 ">
           <span className="sm:max-w-[200px] ">
             <img
-              className="w-full h-full max-w-full max-h-full hidden sm:block object-cover"
+              className="max-w-full max-h-full sm:block"
               width="50px"
               height="50px"
-              src=""
-              alt="BFG Interactive Logo"
+              src="/images/logo.png"
+              alt="AIUOFC Logo"
               loading="lazy"
             ></img>
-            <span className="sm:hidden font-normal text-sm">
-              BFG | Interactive
-            </span>
+            {/* <span className="sm:hidden font-normal text-sm">AIUOFC</span> */}
           </span>
 
           <span className="ml-auto grid grid-cols-2 gap-4">
@@ -82,15 +80,15 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
         <div className="flex-1">
           <a href="/" className="btn btn-ghost normal-case text-xl">
             <span className="ml-3 text-xl font-semibold max-w-[250px]">
-              <span className="sr-only">BFG Interactive Logo</span>
-              {/* <img
-                className="w-full max-w-full max-h-full object-cover"
-                width="50px"
-                height="50px"
-                src=""
-                alt="BFG Interactive Logo"
+              <span className="sr-only">AIUOFC Logo</span>
+              <img
+                className="max-w-full max-h-full object-cover"
+                width="70px"
+                height="70px"
+                src="/images/logo.png"
+                alt="AIUOFC Logo"
                 loading="lazy"
-              ></img> */}
+              ></img>
             </span>
           </a>
         </div>
@@ -109,7 +107,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
           <div className="dropdown dropdown-end">
             <label
               tabIndex={0}
-              className="btn btn-ghost rounded-btn normal-case font-normal text-base md:text-lg"
+              className="btn btn-ghost rounded-btn normal-case font-normal text-base"
             >
               Services
               <svg
