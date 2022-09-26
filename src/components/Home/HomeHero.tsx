@@ -9,7 +9,7 @@ export default function HomeHero(props: IHomeHeroProps) {
       <section className="relative pb-28 lg:pt-0 lg:pb-32">
         <div className="max-h-screen w-full overflow-hidden">
           <video
-            className="absolute w-full md:h-screen xxl:h-[65vh] max-h-screen max-w-full object-cover "
+            className="absolute w-full h-full lg:h-screen xxl:h-[65vh] max-h-screen max-w-full object-cover "
             autoPlay
             loop
             muted

@@ -1,10 +1,29 @@
 import type React from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export interface INavbarProps {}
 
 const Navbar: React.FC<INavbarProps> = function Navbar({}) {
+  const navRef = useRef(null);
+
+  const [nav, setNav] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollPosition(() => {
+        return window.scrollY;
+      });
+    });
+  });
+
   return (
-    <header className="grid justify-items-center sticky top-0 z-50 bg-black text-white w-full pb-2">
+    <header
+      ref={navRef}
+      className={`grid justify-items-center fixed z-50 text-white w-full pb-2 ${
+        scrollPosition > 0 ? "bg-black" : "lg:bg-transparent"
+      }`}
+    >
       <details className="group transition-all duration-150 h-10 open:h-80 overflow-hidden w-full md:hidden text-sm">
         <summary className="transition-all duration-500  flex cursor-pointer items-center rounded-lg px-4 py-2 ">
           <span className="sm:max-w-[200px] ">
