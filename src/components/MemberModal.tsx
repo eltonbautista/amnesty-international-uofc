@@ -19,8 +19,10 @@ export default function Test(props: ITestProps) {
 
     teamMemberContainers.forEach((member, index) => {
       member.children[0].addEventListener("click", function () {
-        body!.style.height = "100%";
-        body!.style.overflowY = "hidden";
+        if (body) {
+          body.style.height = "100%";
+          body.style.overflowY = "hidden";
+        }
         setBas(index);
       });
     });
