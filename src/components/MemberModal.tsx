@@ -10,7 +10,7 @@ export default function Test(props: ITestProps) {
   React.useEffect(() => {
     console.log("test");
     const body = document.querySelector("body");
-    const modalLabel = document.querySelector(".modal-labeller");
+    const modalLabel = [...document.querySelectorAll(".modal-labeller")];
     const teamMemberContainers = [
       ...document.querySelector(
         "body > astro-island > div > astro-slot > main > section.w-full.min-h-screen.my-10.grid > div > div"
@@ -24,8 +24,12 @@ export default function Test(props: ITestProps) {
         setBas(index);
       });
     });
-    modalLabel!.addEventListener("click", function () {
-      body!.style.overflowY = "auto";
+    modalLabel.forEach((label) => {
+      label.addEventListener("click", function (e: any) {
+        if (e!.target!.classList.contains("modal-labeller")) {
+          body!.style.overflowY = "auto";
+        }
+      });
     });
   }, []);
 
@@ -47,7 +51,7 @@ export default function Test(props: ITestProps) {
         id={`my-modal-${bas}`}
         className="modal-toggle test-input"
       />
-      <label htmlFor={`my-modal-${bas}`} className="modal">
+      <label htmlFor={`my-modal-${bas}`} className="modal modal-labeller">
         <label className="modal-box w-11/12 max-w-4xl h-3/4 rounded-md px-8">
           <div className="modal-action mt-0 mb-6 md:mb-12">
             <label
