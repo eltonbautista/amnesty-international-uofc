@@ -1,4 +1,7 @@
 import * as React from "react";
+import marked from "marked";
+import ReactMarkdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
 import * as members from "../pages/about.md";
 import AboutTeamMember from "./AboutComponents/AboutTeamMember";
 
@@ -6,9 +9,10 @@ export interface ITestProps {}
 
 export default function Test(props: ITestProps) {
   const [bas, setBas] = React.useState(0);
+  const fileName = "about.md";
+  const [post, setPost] = React.useState("");
 
   React.useEffect(() => {
-    console.log("test");
     const body = document.querySelector("body");
     const modalLabel = [...document.querySelectorAll(".modal-labeller")];
     const teamMemberContainers = [
@@ -19,10 +23,8 @@ export default function Test(props: ITestProps) {
 
     teamMemberContainers.forEach((member, index) => {
       member.children[0].addEventListener("click", function () {
-        if (body) {
-          body.style.height = "100%";
-          body.style.overflowY = "hidden";
-        }
+        body!.style.height = "100%";
+        body!.style.overflowY = "hidden";
         setBas(index);
       });
     });
