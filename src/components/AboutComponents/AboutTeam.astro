@@ -11,7 +11,7 @@ import * as teamMembers from "../../pages/about.md";
       {
         teamMembers.frontmatter.teamMembers.map(
           (member: any, index: number) => {
-            const { name, position, imgSrc, imgAlt } = member;
+            const { name, position, imgSrc, imgAlt, colorOne } = member;
             return (
               <AboutTeamMember
                 name={name}
@@ -19,6 +19,7 @@ import * as teamMembers from "../../pages/about.md";
                 imgSrc={imgSrc}
                 imgAlt={imgAlt}
                 index={index}
+                colorOne={colorOne}
               />
             );
           }

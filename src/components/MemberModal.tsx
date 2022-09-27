@@ -42,6 +42,7 @@ export default function Test(props: ITestProps) {
     imgSrc,
     imgAlt,
     index,
+    colorOne,
   } = members.frontmatter.teamMembers[bas];
 
   return (
@@ -70,6 +71,7 @@ export default function Test(props: ITestProps) {
               name={name}
               position={position}
               reasonForJoining={reasonForJoining}
+              colorOne={colorOne}
             />
             <div className="grid gap-4 md:gap-0 mt-6 md:mt-0 md:col-span-2 max-w-md justify-self-center">
               <p>{generalInformation}</p>

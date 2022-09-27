@@ -9,6 +9,7 @@ export interface IAboutTeamMemberProps {
   imgSrc: string;
   imgAlt: string;
   index?: number | string;
+  colorOne?: string;
 }
 
 export default function AboutTeamMember(props: IAboutTeamMemberProps) {
@@ -21,10 +22,11 @@ export default function AboutTeamMember(props: IAboutTeamMemberProps) {
     imgSrc,
     imgAlt,
     index,
+    colorOne,
   } = props;
   return (
     <div className="grid my-5 md:my-0">
-      <div className="bg-[linear-gradient(90deg,#FFC0CB_50%,#00FFFF_50%)]">
+      <div className={colorOne}>
         <label
           htmlFor={`my-modal-${index}`}
           className="modal-button hover:cursor-pointer "
@@ -34,9 +36,11 @@ export default function AboutTeamMember(props: IAboutTeamMemberProps) {
           </span>
         </label>
       </div>
-      <div>
-        <h3 className="text-lg md:text-xl mb-1 md:mb-2">{name}</h3>
-        <h4 className="text-xs md:text-sm">{position}</h4>
+      <div className="mt-6">
+        <h3 className="text-lg md:text-xl mb-1 md:mb-2 font-semibold">
+          {name}
+        </h3>
+        <h4 className="text-xs uppercase">{position}</h4>
       </div>
     </div>
   );
