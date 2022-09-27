@@ -5,6 +5,7 @@ import AboutHero from "../components/AboutComponents/AboutHero.astro";
 import ContactForm from "../components/ContactForm";
 import AboutTeam from "../components/AboutComponents/AboutTeam.astro";
 import MemberModal from "../components/MemberModal";
+import * as members from "../pages/about.md";
 ---
 
 <Layout title="Meet the Team">
@@ -12,7 +13,7 @@ import MemberModal from "../components/MemberModal";
     <main class="bg-base-200">
       <AboutHero />
       <AboutTeam />
-      <MemberModal client:load />
+      <MemberModal client:load members={members.frontmatter.teamMembers} />
       <ContactForm />
     </main>
   </WebsiteLayout>

@@ -1,13 +1,12 @@
 import * as React from "react";
-import marked from "marked";
-import ReactMarkdown from "react-markdown";
-import Markdown from "markdown-to-jsx";
-import * as members from "../pages/about.md";
 import AboutTeamMember from "./AboutComponents/AboutTeamMember";
 
-export interface ITestProps {}
+export interface ITestProps {
+  members: any;
+}
 
 export default function Test(props: ITestProps) {
+  const { members } = props;
   const [bas, setBas] = React.useState(0);
 
   React.useEffect(() => {
@@ -46,7 +45,7 @@ export default function Test(props: ITestProps) {
     imgAlt,
     index,
     colorOne,
-  } = members.frontmatter.teamMembers[bas];
+  } = members[bas];
 
   return (
     <>
