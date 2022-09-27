@@ -1,0 +1,27 @@
+---
+import AboutTeamMember from "./AboutTeamMember.astro";
+import * as teamMembers from "../../pages/about.md";
+---
+
+<section class="w-full min-h-screen my-10 grid">
+  <div class="max-w-screen-xl justify-self-center">
+    <div class="block md:grid md:grid-cols-3">
+      {
+        teamMembers.frontmatter.teamMembers.map(
+          (member: any, index: number) => {
+            const { name, position, imgSrc, imgAlt } = member;
+            return (
+              <AboutTeamMember
+                name={name}
+                position={position}
+                imgSrc={imgSrc}
+                imgAlt={imgAlt}
+                index={index}
+              />
+            );
+          }
+        )
+      }
+    </div>
+  </div>
+</section>

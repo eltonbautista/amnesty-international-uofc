@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WebsiteLayout from "../components/WebsiteLayout";
+import AboutHero from "../components/AboutComponents/AboutHero.astro";
+import ContactForm from "../components/ContactForm";
+import AboutTeam from "../components/AboutComponents/AboutTeam.astro";
+import MemberModal from "../components/MemberModal";
+---
+
+<Layout title="Meet the Team">
+  <WebsiteLayout client:load>
+    <main class="">
+      <AboutHero />
+      <AboutTeam />
+      <MemberModal client:load />
+      <ContactForm />
+    </main>
+  </WebsiteLayout>
+</Layout>
