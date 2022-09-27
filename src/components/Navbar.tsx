@@ -117,7 +117,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/#about">About</a>
+              <a href="about">About</a>
             </li>
             <li>
               <a href="blogs">Blog</a>
