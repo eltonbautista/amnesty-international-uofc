@@ -9,8 +9,6 @@ export interface ITestProps {}
 
 export default function Test(props: ITestProps) {
   const [bas, setBas] = React.useState(0);
-  const fileName = "about.md";
-  const [post, setPost] = React.useState("");
 
   React.useEffect(() => {
     const body = document.querySelector("body");
@@ -26,6 +24,7 @@ export default function Test(props: ITestProps) {
         body!.style.height = "100%";
         body!.style.overflowY = "hidden";
         setBas(index);
+        console.log(index);
       });
     });
     modalLabel.forEach((label) => {

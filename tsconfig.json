@@ -6,9 +6,7 @@
     "src/**/*", //if it happend in inside src
     "components/**/*", //if it happend inside components
 ], "compilerOptions": {
-  "moduleResolution": "node",
-  // 👇️ ... rest
-},"files": [
-  "../amnesty-international/src/typings.d.ts"
-]
+    "moduleResolution": "node",
+    // 👇️ ... rest
+  }
 }
