@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as members from "../pages/about.md";
+import AboutTeamMember from "./AboutComponents/AboutTeamMember";
 
 export interface ITestProps {}
 
@@ -17,7 +18,7 @@ export default function Test(props: ITestProps) {
     ];
 
     teamMemberContainers.forEach((member, index) => {
-      member.addEventListener("click", function () {
+      member.children[0].addEventListener("click", function () {
         body!.style.height = "100%";
         body!.style.overflowY = "hidden";
         setBas(index);
@@ -28,6 +29,17 @@ export default function Test(props: ITestProps) {
     });
   }, []);
 
+  const {
+    name,
+    position,
+    generalInformation,
+    reasonForJoining,
+    hobbies,
+    imgSrc,
+    imgAlt,
+    index,
+  } = members.frontmatter.teamMembers[bas];
+
   return (
     <>
       <input
@@ -35,21 +47,34 @@ export default function Test(props: ITestProps) {
         id={`my-modal-${bas}`}
         className="modal-toggle test-input"
       />
-      <div className="modal">
-        <div className="modal-box w-11/12 max-w-5xl">
-          <h3 className="font-bold text-lg asd">
-            {members.frontmatter.teamMembers[bas].name}
-          </h3>
-          <p className="py-4">
-            {members.frontmatter.teamMembers[bas].position}
-          </p>
-          <div className="modal-action">
-            <label htmlFor={`my-modal-${bas}`} className="btn modal-labeller">
-              Yay!
+      <label htmlFor={`my-modal-${bas}`} className="modal">
+        <label className="modal-box w-11/12 max-w-4xl h-3/4 rounded-md px-8">
+          <div className="modal-action mt-0 mb-6 md:mb-12">
+            <label
+              htmlFor={`my-modal-${bas}`}
+              className="modal-labeller hover:cursor-pointer"
+            >
+              X
             </label>
           </div>
-        </div>
-      </div>
+          <div className="grid md:grid-cols-3 gap-2">
+            <AboutTeamMember
+              generalInformation={generalInformation}
+              hobbies={hobbies}
+              imgAlt={imgAlt}
+              imgSrc={imgSrc}
+              name={name}
+              position={position}
+              reasonForJoining={reasonForJoining}
+            />
+            <div className="grid gap-4 md:gap-0 mt-6 md:mt-0 md:col-span-2 max-w-md justify-self-center">
+              <p>{generalInformation}</p>
+              <p>{reasonForJoining}</p>
+              <p>{hobbies}</p>
+            </div>
+          </div>
+        </label>
+      </label>
     </>
   );
 }
