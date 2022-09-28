@@ -144,9 +144,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               className="menu dropdown-content p-2 shadow rounded-box w-64 mt-4 bg-neutral"
             >
               <li>
-                <a href="/calgary-web-design-company/web-development">
-                  Contact
-                </a>
+                <a href="#contact">Contact</a>
               </li>
               <li>
                 <a href="/calgary-web-design-company/web-development">Events</a>
