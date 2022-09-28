@@ -6,14 +6,29 @@ import ContactForm from "../components/ContactForm";
 import AboutTeam from "../components/AboutComponents/AboutTeam.astro";
 import MemberModal from "../components/MemberModal";
 import * as members from "../pages/about.md";
+import AboutCTA from "../components/AboutComponents/AboutCTA.astro";
 ---
 
 <Layout title="Meet the Team">
   <WebsiteLayout client:load>
-    <main class="bg-base-200">
+    <main class="bg-base-100">
+      <div class="lg:h-[72px] w-full bg-black"></div>
+
       <AboutHero />
       <AboutTeam />
       <MemberModal client:load members={members.frontmatter.teamMembers} />
+      <AboutCTA
+        headingOne="Events"
+        descriptionOne="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit voluptates quisquam itaque amet sint veniam impedit repellat."
+        linkOne="/events"
+        imgSrcOne="https://images.unsplash.com/photo-1606836483372-d59cfc76228f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        imgAltOne=""
+        headingTwo="Blogs"
+        descriptionTwo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit voluptates quisquam itaque amet sint veniam impedit repellat."
+        linkTwo="/blogs"
+        imgSrcTwo="https://images.unsplash.com/photo-1580130601254-05fa235abeab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80"
+        imgAltTwo=""
+      />
       <ContactForm />
     </main>
   </WebsiteLayout>

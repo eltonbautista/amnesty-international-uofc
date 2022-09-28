@@ -6,7 +6,7 @@ export interface IHomeHeroProps {}
 export default function HomeHero(props: IHomeHeroProps) {
   return (
     <>
-      <section className="relative pb-28 lg:pt-0">
+      <section className="relative pb-28 lg:pt-0" id="#home">
         <div className="max-h-screen w-full overflow-hidden">
           <video
             className="absolute w-full h-full lg:h-[90vh] xxl:h-[65vh] max-h-screen max-w-full object-cover "
@@ -41,8 +41,8 @@ export default function HomeHero(props: IHomeHeroProps) {
                   />
                   Amnesty International University of Calgary
                 </p>
-                <h1 className="mb-3 text-4xl font-semibold leading-tight lg:text-6xl xxl:text-7xl sm:leading-tight">
-                  Passionate for Human Rights
+                <h1 className="max-w-screen-md mb-3 text-4xl font-semibold leading-tight lg:text-6xl xxl:text-7xl sm:leading-tight">
+                  Are you passionate about Human Rights?
                 </h1>
                 <h2 className="max-w-screen-md">
                   Helping bring awareness to students, faculty, and alumni about
