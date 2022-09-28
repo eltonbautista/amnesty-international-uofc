@@ -1,12 +1,128 @@
 import React, { Component } from "react";
 import Button from "./Button";
 
-export default function ContactForm() {
+interface IAboutCTA {
+  headingOne: string;
+  descriptionOne: string;
+  linkOne: string;
+  imgSrcOne: string;
+  imgAltOne: string;
+  headingTwo: string;
+  descriptionTwo: string;
+  linkTwo: string;
+  imgSrcTwo: string;
+  imgAltTwo: string;
+}
+
+export default function ContactForm(props: IAboutCTA) {
+  const {
+    headingOne,
+    descriptionOne,
+    linkOne,
+    imgSrcOne,
+    imgAltOne,
+    headingTwo,
+    descriptionTwo,
+    linkTwo,
+    imgSrcTwo,
+    imgAltTwo,
+  } = props;
   return (
     <section
       className="grid justify-items-center py-8 lg:pt-12 bg-base-200 px-4 md:px-6 lg:px-8"
       id="contact"
     >
+      {/* CTA */}
+      <div className="max-w-screen-xl px-4 md:px-6 lg:px-8 justify-self-center lg:grid-cols-2 lg:grid justify-items-center mb-8 md:mb-10">
+        <div className="m-10 mx-4 max-w-screen-md overflow-hidden rounded-xl border shadow-lg md:pl-8">
+          <div className="flex flex-col overflow-hidden bg-white md:flex-row md:h-80">
+            <div className="flex w-full flex-col p-4 md:w-1/2 md:p-8 lg:w-3/5">
+              <h2 className="text-xl font-bold text-gray-900 md:text-2xl lg:text-4xl">
+                {headingOne}
+              </h2>
+              <p className="my-3 max-w-md text-gray-500">{descriptionOne}</p>
+              <div className="mt-auto">
+                <div className="group flex w-44 cursor-pointer select-none items-center justify-center rounded-md bg-black px-2 py-1 text-white transition">
+                  <a
+                    href={linkOne}
+                    className="group flex w-full items-center justify-center rounded py-1 text-center font-bold"
+                  >
+                    Learn More
+                  </a>
+                  <svg
+                    className="flex-0 group-hover:w-6 ml-4 h-6 w-0 transition-all"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-first ml-auto h-48 w-full md:order-none md:h-auto md:w-1/2 lg:w-2/5">
+              <img
+                className="h-full w-full object-cover"
+                src={imgSrcOne}
+                width="200px"
+                height="300px"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="m-10 mx-4 max-w-screen-md overflow-hidden rounded-xl border shadow-lg md:pr-8">
+          <div className="flex flex-col overflow-hidden bg-white md:flex-row md:h-80">
+            <div className="order-first ml-auto h-48 w-full md:order-none md:h-auto md:w-1/2 lg:w-2/5">
+              <img
+                className="h-full w-full object-cover"
+                src={imgSrcTwo}
+                width="200px"
+                height="300px"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex w-full flex-col p-4 md:w-1/2 md:p-8 lg:w-3/5">
+              <h2 className="text-xl font-bold text-gray-900 md:text-2xl lg:text-4xl">
+                {headingTwo}
+              </h2>
+              <p className="my-3 max-w-md text-gray-500">{descriptionTwo}</p>
+              <div className="mt-auto">
+                <div className="group flex w-44 cursor-pointer select-none items-center justify-center rounded-md bg-black px-2 py-1 text-white transition">
+                  <a
+                    href={linkTwo}
+                    className="group flex w-full items-center justify-center rounded py-1 text-center font-bold"
+                  >
+                    Learn More
+                  </a>
+                  <svg
+                    className="flex-0 group-hover:w-6 ml-4 h-6 w-0 transition-all"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* FORM */}
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-center mb-3 lg:mb-12 max-w-screen-md">
         Stay connected with updates to our latest news, blog posts, and events.
       </h2>
