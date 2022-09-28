@@ -202,10 +202,6 @@ export default function Footer(props: IFooterProps) {
                 {" "}
                 Terms & Conditions{" "}
               </a>
-              <a className="hover:opacity-75" href="">
-                {" "}
-                Returns Policy{" "}
-              </a>
             </div>
 
             <p className="mt-4 sm:mt-0">
@@ -214,7 +210,7 @@ export default function Footer(props: IFooterProps) {
           </div>
 
           <p className="mt-8 text-xs">
-            Website created by{" "}
+            Website created by Monica Bautista in collaboration with{" "}
             <a
               href="https://bfginteractive.ca/"
               target="_blank"
