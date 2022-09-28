@@ -11,7 +11,7 @@ const {
 ---
 
 <article
-  class="flex flex-col items-center gap-4 md:flex-row lg:gap-6 bg-base-200 p-6 rounded-xl"
+  class="flex flex-col items-center gap-4 md:flex-row lg:gap-6 bg-base-200 p-6 rounded-xl max-w-sm md:max-w-2xl justify-self-center w-full"
 >
   <a
     href={"/blogs/" + articleLink}
@@ -25,7 +25,7 @@ const {
     />
   </a>
 
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-2 self-baseline md:self-auto">
     <span class="text-sm">{articleDate}</span>
 
     <h2 class="text-xl font-bold">
