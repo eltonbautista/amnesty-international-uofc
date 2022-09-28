@@ -1,9 +1,10 @@
 ---
+import Button from "../Button";
 ---
 
 <div class="flex min-h-screen">
   <div
-    class="relative my-auto mx-auto flex flex-col px-4 sm:max-w-xl md:max-w-screen-xl md:flex-row"
+    class="relative my-auto mx-auto flex flex-col px-4 sm:max-w-xl md:max-w-screen-xl md:flex-row py-28 xl:gap-x-14"
   >
     <!-- Left Column -->
     <div class="mx-auto flex w-full max-w-xl lg:max-w-screen-xl">
@@ -17,44 +18,39 @@
             </p>
           </div>
           <h2
-            class="mb-6 max-w-lg text-3xl font-extrabold text-slate-700 sm:text-5xl sm:leading-snug"
+            class="mb-6 max-w-lg text-3xl font-extrabold sm:text-5xl sm:leading-snug"
           >
-            Discover Fantasy <br />
-            Lands of
+            Amnesty International
             <span
-              class="rounded- abg-gradient-to-r inline-block bg-sky-400 from-lime-400 to-sky-400 px-2 font-bold text-white"
-              >Zurich</span
+              class="rounded- abg-gradient-to-r inline-block bg-gradient-to-r from-secondary to-[red] px-2 font-bold text-white"
+              >University of Calgary</span
             >
           </h2>
-          <p class="text-base text-gray-700 md:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ullam
-            rem voluptatem, animi tempora expedita!Lorem ipsum dolor.
-          </p>
+          <div class="text-base md:text-lg grid gap-4">
+            <p class="">
+              Amnesty International at the University of Calgary is a
+              student-based chapter of Amnesty International, a worldwide
+              nonprofit organization which advocates for the promotion and
+              protection of human rights.
+            </p>
+            <p>
+              Amnesty International has no political, governmental, or corporate
+              affiliation, but strives to achieve the universal respect of human
+              rights by targeting specific cases of human rights violations and
+              raising public awareness.
+            </p>
+            <p>
+              The AI U of C chapter aims to bring awareness to students,
+              faculty, and alumni about human rights violations around the
+              world, and how they can contribute to the campaign for universal
+              human rights. This page is one of the ways that we hope to
+              broadcast information regarding: our club and our mission,
+              upcoming events, and current campaigns.
+            </p>
+          </div>
         </div>
         <div class="flex items-center">
-          <a
-            href="/"
-            class="bg-sky-400a mr-6 inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-lime-400 to-sky-400 px-8 font-medium tracking-wide text-white shadow-lg shadow-sky-300 outline-none transition duration-200 hover:scale-110 hover:bg-sky-500 focus:ring"
-          >
-            Get started
-          </a>
-          <a
-            href="/"
-            class="inline-flex items-center font-semibold text-sky-400 transition-colors duration-200 hover:text-lime-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2 h-6 w-6"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                clip-rule="evenodd"></path>
-            </svg>
-            Watch Videos</a
-          >
+          <Button link="join">Join Us</Button>
         </div>
       </div>
     </div>
@@ -67,7 +63,7 @@
         <div class="overflow-hidden rounded-xl bg-yellow-400">
           <img
             class="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            src="https://scontent.fyyc7-1.fna.fbcdn.net/v/t1.6435-9/84180478_3053803214644274_7726375337751216128_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=BE9z7nbnv4EAX82Hoic&tn=I5yqOSepRUm_uomz&_nc_ht=scontent.fyyc7-1.fna&oh=00_AT9aAtD4HHKgzukjkSVsmRH0I8ajrRdnXBD7TaFgvUkNPg&oe=63571CD6"
             alt=""
           />
         </div>
@@ -76,21 +72,21 @@
         <div class="h-40 overflow-hidden rounded-xl bg-green-600/60">
           <img
             class="mx-auto h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            src="https://scontent.fyyc7-1.fna.fbcdn.net/v/t1.6435-9/83243837_3053803257977603_2160544192575569920_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=E2ElHiM4q7AAX9vxP7m&tn=I5yqOSepRUm_uomz&_nc_ht=scontent.fyyc7-1.fna&oh=00_AT8VhwpLzfhGllMp0f7PX9CFzE4vCpPBh7hk8vXu_coMAg&oe=6357D289"
             alt=""
           />
         </div>
         <div class="h-40 overflow-hidden rounded-xl bg-pink-600/60">
           <img
             class="mx-auto h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            src="https://scontent.fyyc7-1.fna.fbcdn.net/v/t1.6435-9/143079858_4051778501513402_1760347635572610458_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=tPXaFhGorMcAX9VLsYl&_nc_ht=scontent.fyyc7-1.fna&oh=00_AT8sGqDh9dPe6OQGtGwSM-T_taJONSnTgTgd-PvYdstKRg&oe=6358128D"
             alt=""
           />
         </div>
         <div class="h-40 overflow-hidden rounded-xl bg-blue-600/60">
           <img
             class="mx-auto h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1342&q=80"
+            src="https://scontent.fyyc7-1.fna.fbcdn.net/v/t1.6435-9/83241280_3053803174644278_3057801481055895552_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=evmyNDW8wEEAX-CoFKY&_nc_ht=scontent.fyyc7-1.fna&oh=00_AT-oWdmivD0c8oYx487x3H6cY_1KxpfrMoE2074PZ1Orkg&oe=635849F6"
             alt=""
           />
         </div>
