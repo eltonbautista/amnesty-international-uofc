@@ -24,7 +24,7 @@ export default function Button(props: IButtonProps) {
         </a>
       ) : (
         <button
-          className="relative inline-block group focus:outline-none focus:ring"
+          className="relative inline-block group focus:outline-none focus:ring bg-white"
           type={type}
         >
           <span className="absolute inset-0 transition-transform translate-x-1.5 translate-y-1.5 bg-yellow-300 group-hover:translate-y-0 group-hover:translate-x-0"></span>
