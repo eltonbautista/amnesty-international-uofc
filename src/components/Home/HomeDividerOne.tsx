@@ -13,7 +13,6 @@ export default function HomeDividerOne(props: IHomeDividerOneProps) {
         id="wave"
         style={{
           transform: "rotate(0deg)",
-          transition: "0.3s",
         }}
         viewBox="0 0 1440 220"
         version="1.1"
@@ -46,7 +45,6 @@ export default function HomeDividerOne(props: IHomeDividerOneProps) {
         id="wave"
         style={{
           transform: "rotate(180deg)",
-          transition: "0.3s",
         }}
         viewBox="0 0 1440 220"
         version="1.1"
