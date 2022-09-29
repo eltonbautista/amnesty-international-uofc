@@ -1,10 +1,20 @@
 ---
+interface Props {
+  articleTitle: string;
+  articleDescription: string;
+  articleLink: string;
+  articleDate: string;
+  articleImgSrc?: string;
+  articleImgAlt?: string;
+  cTA?: string;
+}
+
 const {
   articleDate,
   articleTitle,
+  articleLink,
   articleDescription,
   cTA,
-  articleLink,
   articleImgSrc,
   articleImgAlt,
 } = Astro.props;
@@ -20,7 +30,7 @@ const {
     <img
       src={articleImgSrc}
       loading="lazy"
-      alt={articleImgAlt}
+      alt={articleImgAlt || "blog post"}
       class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
     />
   </a>
