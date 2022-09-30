@@ -24,7 +24,6 @@ export async function getStaticPaths() {
   const { items } = await contentfulClient.getEntries<blogPostFields>({
     content_type: "blogPost",
   });
-  console.log(items[0].fields.content.content[2].data.target);
   const pages = items.map((item) => ({
     params: { slug: item.fields.slug },
     props: {
@@ -33,7 +32,6 @@ export async function getStaticPaths() {
       date: new Date(item.fields.date).toLocaleDateString(),
     },
   }));
-  // console.log(pages);
   return pages;
 }
 

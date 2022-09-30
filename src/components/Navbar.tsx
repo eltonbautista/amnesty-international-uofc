@@ -87,10 +87,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
             link="/calgary-web-design-company/web-development"
             text="Contact"
           /> */}
-          <NavbarChild
-            link="/calgary-web-design-company/web-development"
-            text="Events"
-          />
+          <NavbarChild link="/events" text="Events" />
           <NavbarChild link="#contact" text="Contact" />
         </nav>
       </details>
@@ -146,7 +143,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
                 <a href="#contact">Contact</a>
               </li>
               <li>
-                <a href="/calgary-web-design-company/web-development">Events</a>
+                <a href="/events">Events</a>
               </li>
             </ul>
           </div>

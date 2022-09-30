@@ -40,6 +40,24 @@ export interface memberFields {
   colorTwo?: string;
 }
 
+export interface eventFields {
+  title: string;
+  date: string;
+  description: string;
+  image: {
+    fields: {
+      file: {
+        url: string;
+        width: number;
+        height: number;
+      };
+    };
+  };
+  rsvp: boolean;
+  place: string;
+  link: string;
+}
+
 
 export const contentfulClient = contentful.createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,

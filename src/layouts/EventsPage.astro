@@ -1,0 +1,66 @@
+---
+import ContactForm from "../components/ContactForm";
+import EventItem from "../components/EventsComponents/EventItem.astro";
+import EventHero from "../components/EventsComponents/EventHero.astro";
+import EventSection from "../components/EventsComponents/EventSection.astro";
+import WebsiteLayout from "../components/WebsiteLayout";
+import Layout from "./Layout.astro";
+
+import { contentfulClient } from "../lib/contentful";
+import type { eventFields } from "../lib/contentful";
+const { items } = await contentfulClient.getEntries<eventFields>({
+  content_type: "event",
+});
+
+const events = items.map((item) => {
+  const { date, description, image, link, place, rsvp, title } = item.fields;
+  return {
+    date: new Date(date).toLocaleDateString(),
+    description,
+    image: "https:" + image.fields.file.url,
+    link,
+    place,
+    rsvp,
+    title,
+  };
+});
+---
+
+<Layout title="AIUOFC Events Page">
+  <WebsiteLayout>
+    <main>
+      <EventHero />
+      <EventSection>
+        {
+          events.map((event, index) => {
+            const { date, description, image, link, place, rsvp, title } =
+              event;
+            return (
+              <EventItem
+                date={date}
+                description={description}
+                image={image}
+                link={link}
+                place={place}
+                rsvp={rsvp}
+                title={title}
+              />
+            );
+          })
+        }
+      </EventSection>
+    </main>
+    <ContactForm
+      headingOne="Events"
+      descriptionOne="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit voluptates quisquam itaque amet sint veniam impedit repellat."
+      linkOne="/events"
+      imgSrcOne="https://images.unsplash.com/photo-1606836483372-d59cfc76228f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      imgAltOne=""
+      headingTwo="Join"
+      descriptionTwo="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit voluptates quisquam itaque amet sint veniam impedit repellat."
+      linkTwo="/join"
+      imgSrcTwo="https://images.unsplash.com/photo-1580130601254-05fa235abeab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80"
+      imgAltTwo=""
+    />
+  </WebsiteLayout>
+</Layout>
