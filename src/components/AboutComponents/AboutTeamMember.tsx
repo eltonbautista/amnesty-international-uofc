@@ -1,4 +1,5 @@
 import * as React from "react";
+import type { memberFields } from "../../lib/contentful";
 
 export interface IAboutTeamMemberProps {
   name: string;
@@ -12,18 +13,21 @@ export interface IAboutTeamMemberProps {
   colorOne?: string;
 }
 
-export default function AboutTeamMember(props: IAboutTeamMemberProps) {
+export default function AboutTeamMember(props: memberFields) {
   const {
     name,
     position,
     generalInformation,
     reasonForJoining,
     hobbies,
-    imgSrc,
+    profilePicture,
     imgAlt,
     index,
     colorOne,
+    colorTwo,
   } = props;
+
+  const imgSrc = profilePicture?.fields.file.url;
   return (
     <div className="grid my-5 md:my-0">
       <div className={colorOne}>

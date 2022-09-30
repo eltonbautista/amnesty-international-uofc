@@ -1,6 +1,6 @@
 ---
 import AboutTeamMember from "./AboutTeamMember";
-import * as teamMembers from "../../pages/about.md";
+const { members } = Astro.props;
 ---
 
 <section class="w-full min-h-screen my-10 grid">
@@ -9,21 +9,22 @@ import * as teamMembers from "../../pages/about.md";
       class="block md:grid md:grid-cols-3 md:gap-12 [&:hover>div]:opacity-50]"
     >
       {
-        teamMembers.frontmatter.teamMembers.map(
-          (member: any, index: number) => {
-            const { name, position, imgSrc, imgAlt, colorOne } = member;
-            return (
-              <AboutTeamMember
-                name={name}
-                position={position}
-                imgSrc={imgSrc}
-                imgAlt={imgAlt}
-                index={index}
-                colorOne={colorOne}
-              />
-            );
-          }
-        )
+        members.map((member: any, index: number) => {
+          const { name, position, profilePicture, imgAlt, colorOne, colorTwo } =
+            member;
+          const foo = colorOne;
+          return (
+            <AboutTeamMember
+              name={name}
+              position={position}
+              profilePicture={profilePicture}
+              imgAlt={imgAlt}
+              index={index}
+              colorOne={foo}
+              colorTwo={colorTwo}
+            />
+          );
+        })
       }
     </div>
   </div>

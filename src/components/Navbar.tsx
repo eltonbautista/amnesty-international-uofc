@@ -35,7 +35,6 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               alt="AIUOFC Logo"
               loading="lazy"
             ></img>
-            {/* <span className="sm:hidden font-normal text-sm">AIUOFC</span> */}
           </span>
 
           <span className="ml-auto grid grid-cols-2 gap-7">
@@ -117,10 +116,10 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="about">About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="blogs">Blog</a>
+              <a href="/blogs">Blog</a>
             </li>
           </ul>
           <div className="dropdown dropdown-end">

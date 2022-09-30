@@ -1,11 +1,22 @@
 import * as React from "react";
 import AboutTeamMember from "./AboutComponents/AboutTeamMember";
+import type { memberFields } from "../lib/contentful";
 
-export interface ITestProps {
-  members: any;
-}
+// export interface ITestProps {
+//   members: any;
+//   name: string;
+//   position: string;
+//   generalInformation: string;
+//   reasonForJoining: string;
+//   hobbies: string;
+//   imgSrc: string;
+//   imgAlt: string;
+//   index?: number;
+//   colorOne: string;
+//   colorTwo: string;
+// }
 
-export default function Test(props: ITestProps) {
+export default function Test(props: memberFields) {
   const { members } = props;
   const [bas, setBas] = React.useState(0);
 
@@ -41,10 +52,11 @@ export default function Test(props: ITestProps) {
     generalInformation,
     reasonForJoining,
     hobbies,
-    imgSrc,
+    profilePicture,
     imgAlt,
     index,
     colorOne,
+    colorTwo,
   } = members[bas];
 
   return (
@@ -68,12 +80,13 @@ export default function Test(props: ITestProps) {
             <AboutTeamMember
               generalInformation={generalInformation}
               hobbies={hobbies}
+              reasonForJoining={reasonForJoining}
               imgAlt={imgAlt}
-              imgSrc={imgSrc}
+              profilePicture={profilePicture}
               name={name}
               position={position}
-              reasonForJoining={reasonForJoining}
               colorOne={colorOne}
+              colorTwo={colorTwo}
             />
             <div className="grid gap-4 md:gap-0 mt-6 md:mt-0 md:col-span-2 max-w-md justify-self-center">
               <p>{generalInformation}</p>

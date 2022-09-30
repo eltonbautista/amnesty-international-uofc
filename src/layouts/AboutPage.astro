@@ -7,6 +7,43 @@ import AboutTeam from "../components/AboutComponents/AboutTeam.astro";
 import MemberModal from "../components/MemberModal";
 import * as members from "../pages/about.md";
 import AboutCTA from "../components/AboutComponents/AboutCTA.astro";
+import { contentfulClient } from "../lib/contentful";
+import type { memberFields } from "../lib/contentful";
+
+const { items } = await contentfulClient.getEntries<memberFields>({
+  content_type: "member",
+});
+
+const posts = items.map((item) => {
+  const {
+    colorOne,
+    colorTwo,
+    generalInformation,
+    hobbies,
+    imgAlt,
+    profilePicture,
+    name,
+    position,
+    reasonForJoining,
+    index,
+    members,
+  } = item.fields;
+  return {
+    colorOne,
+    colorTwo,
+    generalInformation,
+    hobbies,
+    imgAlt,
+    name,
+    position,
+    reasonForJoining,
+    index,
+    members,
+    profilePicture,
+  };
+});
+
+console.log(posts);
 ---
 
 <Layout title="Meet the Team">
@@ -15,8 +52,8 @@ import AboutCTA from "../components/AboutComponents/AboutCTA.astro";
       <div class="lg:h-[72px] w-full bg-black"></div>
 
       <AboutHero />
-      <AboutTeam />
-      <MemberModal client:load members={members.frontmatter.teamMembers} />
+      <AboutTeam members={posts} />
+      <MemberModal client:load members={posts} />
       <ContactForm
         headingOne="Events"
         descriptionOne="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odit voluptates quisquam itaque amet sint veniam impedit repellat."

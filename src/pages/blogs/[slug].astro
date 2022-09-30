@@ -2,6 +2,10 @@
 import { contentfulClient } from "../../lib/contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { blogPostFields } from "../../lib/contentful";
+import Layout from "../../layouts/Layout.astro";
+import WebsiteLayout from "../../components/WebsiteLayout";
+import BlogTemplate from "../../components/BlogComponents/BlogTemplate.astro";
+import BlogPosts from "../../components/BlogComponents/BlogPosts.astro";
 
 export async function getStaticPaths() {
   const { items } = await contentfulClient.getEntries<blogPostFields>({
@@ -28,13 +32,13 @@ interface Props {
 const { content, title, date } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <title>{title}</title>
-  </head>
-  <body>
-    <h1>{title}</h1>
-    <time>{date}</time>
-    <article set:html={content}></article>
-  </body>
-</html>
+<Layout title={title}>
+  <WebsiteLayout>
+    <main>
+      <BlogTemplate articleTitle={title} articleDate={date}>
+        <article set:html={content}></article>
+      </BlogTemplate>
+      <BlogPosts />
+    </main>
+  </WebsiteLayout>
+</Layout>

@@ -1,15 +1,29 @@
 ---
 import * as articleList from "../../pages/blogs.md";
 import Button from "../Button";
+
+export interface IBlogTemplateProps {
+  articleTags?: string[];
+  articleHeadingStatement?: string;
+  articleQuote?: string;
+  articleQuoteAuthor?: string;
+  articleDate?: string;
+  articleDescription?: string;
+  articleTitle?: string;
+}
+
 const {
-  articleNumber,
+  // articleNumber,
   articleTags,
   articleHeadingStatement,
   articleQuote,
   articleQuoteAuthor,
-} = Astro.props.content;
-let index =
-  articleList.frontmatter.articleListObjects.length - (articleNumber + 1);
+  articleDate,
+  articleDescription,
+  articleTitle,
+} = Astro.props.content || Astro.props;
+// let index =
+// articleList.frontmatter.articleListObjects.length - (articleNumber + 1);
 ---
 
 <section>
@@ -18,37 +32,37 @@ let index =
     <article class="pt-2 md:pt-14 bg-base-100">
       <header class="mx-auto max-w-screen-xl rounded-t-lg p-8">
         <p class="">
-          Published {
-            articleList.frontmatter.articleListObjects[index].articleDate
-          }
+          Published {articleDate}
         </p>
         <h1 class="mt-2 text-4xl font-bold sm:text-5xl">
-          {articleList.frontmatter.articleListObjects[index].articleTitle}
+          {articleTitle}
         </h1>
         <p class="mt-6 text-lg">
-          {articleList.frontmatter.articleListObjects[index].articleDescription}
+          {articleDescription}
         </p>
         <div class="mt-6 flex flex-wrap gap-2">
           {
-            articleTags.map((tag: string, i: number) => {
-              return (
-                <button class="relative inline-block text-sm font-medium group focus:outline-none focus:ring">
-                  <span
-                    class:list={[
-                      "absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 group-hover:translate-y-0 group-hover:translate-x-0",
-                    ]}
-                  />
+            articleTags
+              ? articleTags.map((tag: string, i: number) => {
+                  return (
+                    <button class="relative inline-block text-sm font-medium group focus:outline-none focus:ring">
+                      <span
+                        class:list={[
+                          "absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 group-hover:translate-y-0 group-hover:translate-x-0",
+                        ]}
+                      />
 
-                  <span
-                    class:list={[
-                      "relative block px-8 py-3 border border-current hover:bg-secondary",
-                    ]}
-                  >
-                    {tag}
-                  </span>
-                </button>
-              );
-            })
+                      <span
+                        class:list={[
+                          "relative block px-8 py-3 border border-current hover:bg-secondary",
+                        ]}
+                      >
+                        {tag}
+                      </span>
+                    </button>
+                  );
+                })
+              : null
           }
         </div>
         <img

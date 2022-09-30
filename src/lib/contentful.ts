@@ -18,6 +18,28 @@ export interface blogPostFields {
   };
 }
 
+export interface memberFields {
+  members?: any;
+  name?: string;
+  position?: string;
+  generalInformation?: string;
+  reasonForJoining?: string;
+  hobbies?: string;
+  profilePicture?: {
+    fields: {
+      file: {
+        url: string;
+        width: number;
+        height: number;
+      };
+    };
+  };
+  imgAlt?: string;
+  index?: number;
+  colorOne?: string;
+  colorTwo?: string;
+}
+
 
 export const contentfulClient = contentful.createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
