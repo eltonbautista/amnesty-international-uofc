@@ -1,5 +1,4 @@
 ---
-import * as articleList from "../../pages/blogs.md";
 import Button from "../Button";
 
 export interface IBlogTemplateProps {
@@ -13,7 +12,6 @@ export interface IBlogTemplateProps {
 }
 
 const {
-  // articleNumber,
   articleTags,
   articleHeadingStatement,
   articleQuote,
@@ -22,8 +20,6 @@ const {
   articleDescription,
   articleTitle,
 } = Astro.props.content || Astro.props;
-// let index =
-// articleList.frontmatter.articleListObjects.length - (articleNumber + 1);
 ---
 
 <section>

@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 import type { memberFields } from "../../lib/contentful";
 
 export interface IAboutTeamMemberProps {
@@ -27,10 +27,19 @@ export default function AboutTeamMember(props: memberFields) {
     colorTwo,
   } = props;
 
+  console.log(colorTwo);
+
   const imgSrc = profilePicture?.fields.file.url;
   return (
     <div className="grid my-5 md:my-0">
-      <div className={colorOne}>
+      <div
+        style={
+          {
+            "--my-text-color": `linear-gradient(90deg, ${colorOne} 50%,${colorTwo} 50%)`,
+          } as React.CSSProperties
+        }
+        className="bg-[image:var(--my-text-color)]"
+      >
         <label
           htmlFor={`my-modal-${index}`}
           className="modal-button hover:cursor-pointer "

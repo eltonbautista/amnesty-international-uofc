@@ -1,6 +1,8 @@
 ---
 import { contentfulClient } from "../../lib/contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import type { blogPostFields } from "../../lib/contentful";
 import Layout from "../../layouts/Layout.astro";
 import WebsiteLayout from "../../components/WebsiteLayout";
@@ -8,18 +10,30 @@ import BlogTemplate from "../../components/BlogComponents/BlogTemplate.astro";
 import BlogPosts from "../../components/BlogComponents/BlogPosts.astro";
 
 export async function getStaticPaths() {
+  const options = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: ({
+        data: {
+          target: { fields },
+        },
+      }) =>
+        `<img src="${fields.file.url}" height="${fields.file.details.image.height}" width="${fields.file.details.image.width}" alt="${fields.description}"/>`,
+    },
+  };
+
   const { items } = await contentfulClient.getEntries<blogPostFields>({
     content_type: "blogPost",
   });
-
+  console.log(items[0].fields.content.content[2].data.target);
   const pages = items.map((item) => ({
     params: { slug: item.fields.slug },
     props: {
       title: item.fields.title,
-      content: documentToHtmlString(item.fields.content),
+      content: documentToHtmlString(item.fields.content, options),
       date: new Date(item.fields.date).toLocaleDateString(),
     },
   }));
+  // console.log(pages);
   return pages;
 }
 
@@ -36,7 +50,11 @@ const { content, title, date } = Astro.props;
   <WebsiteLayout>
     <main>
       <BlogTemplate articleTitle={title} articleDate={date}>
-        <article set:html={content}></article>
+        <article
+          class="[&>p]:mt-3 [&>h2]:text-2xl [&>h2]:md:text-4xl"
+          set:html={content}
+        >
+        </article>
       </BlogTemplate>
       <BlogPosts />
     </main>
