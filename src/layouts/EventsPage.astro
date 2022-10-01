@@ -29,24 +29,42 @@ const events = items.map((item) => {
 <Layout title="AIUOFC Events Page">
   <WebsiteLayout>
     <main>
-      <EventHero />
+      <EventHero>
+        {
+          events.length > 0 && (
+            <EventItem
+              date={events[0].date}
+              description={events[0].description}
+              image={events[0].image}
+              link={events[0].link}
+              place={events[0].place}
+              rsvp={events[0].rsvp}
+              title={events[0].title}
+            />
+          )
+        }
+      </EventHero>
+
       <EventSection>
         {
-          events.map((event, index) => {
-            const { date, description, image, link, place, rsvp, title } =
-              event;
-            return (
-              <EventItem
-                date={date}
-                description={description}
-                image={image}
-                link={link}
-                place={place}
-                rsvp={rsvp}
-                title={title}
-              />
-            );
-          })
+          events.length > 0 &&
+            events.map((event, index) => {
+              const { date, description, image, link, place, rsvp, title } =
+                event;
+              if (index > 0) {
+                return (
+                  <EventItem
+                    date={date}
+                    description={description}
+                    image={image}
+                    link={link}
+                    place={place}
+                    rsvp={rsvp}
+                    title={title}
+                  />
+                );
+              }
+            })
         }
       </EventSection>
     </main>
