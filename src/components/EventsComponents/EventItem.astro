@@ -6,7 +6,7 @@ const { title, description, date, link, rsvp, image, place } = Astro.props;
 ---
 
 <article
-  class="mx-auto my-4 flex w-full flex-col overflow-hidden rounded-2xl border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg max-w-md"
+  class="mx-auto my-4 flex w-full flex-col overflow-hidden rounded-2xl border border-gray-300 bg-white text-gray-900 transition hover:translate-y-2 hover:shadow-lg max-w-xl"
 >
   <a href="#">
     <img src={image} class="h-56 w-full object-cover" alt="" />
@@ -30,9 +30,16 @@ const { title, description, date, link, rsvp, image, place } = Astro.props;
             d="M14.272 10.445L18 2m-8.684 8.632L5 2m7.761 8.048L8.835 2m5.525 0l-1.04 2.5M6 16a6 6 0 1 0 12 0a6 6 0 0 0-12 0Z"
           ></path>
         </svg>
-        {date}
       </span>
+      {
+        rsvp ? (
+          <div class="badge badge-success font-semibold p-3">RSVP Open</div>
+        ) : (
+          <div class="badge badge-error font-semibold p-3">RSVP Closed</div>
+        )
+      }
       <h3 class="mt-4 mb-3 text-xl font-semibold xl:text-2xl">
+        <span class="text-xs block">{date}</span>
         {title}
       </h3>
       <p class="mb-4 text-base font-light">
