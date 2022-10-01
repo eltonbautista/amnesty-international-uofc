@@ -40,19 +40,20 @@ const posts = items.map((item) => {
     >
       <!-- Article -->
       {
-        posts.map((post, index) => {
-          const { date, title, slug, description, image } = post;
+        posts.length > 0 &&
+          posts.map((post, index) => {
+            const { date, title, slug, description, image } = post;
 
-          return (
-            <ArticlePreviewItem
-              articleDate={date}
-              articleTitle={title}
-              articleDescription={description}
-              articleLink={slug}
-              articleImgSrc={image}
-            />
-          );
-        })
+            return (
+              <ArticlePreviewItem
+                articleDate={date}
+                articleTitle={title}
+                articleDescription={description}
+                articleLink={slug}
+                articleImgSrc={image}
+              />
+            );
+          })
       }
 
       <!-- /Article -->

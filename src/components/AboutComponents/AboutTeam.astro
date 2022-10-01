@@ -9,22 +9,29 @@ const { members } = Astro.props;
       class="block md:grid md:grid-cols-3 md:gap-12 [&:hover>div]:opacity-50]"
     >
       {
-        members.map((member: any, index: number) => {
-          const { name, position, profilePicture, imgAlt, colorOne, colorTwo } =
-            member;
-          const foo = colorOne;
-          return (
-            <AboutTeamMember
-              name={name}
-              position={position}
-              profilePicture={profilePicture}
-              imgAlt={imgAlt}
-              index={index}
-              colorOne={foo}
-              colorTwo={colorTwo}
-            />
-          );
-        })
+        members.length > 0 &&
+          members.map((member: any, index: number) => {
+            const {
+              name,
+              position,
+              profilePicture,
+              imgAlt,
+              colorOne,
+              colorTwo,
+            } = member;
+            const foo = colorOne;
+            return (
+              <AboutTeamMember
+                name={name}
+                position={position}
+                profilePicture={profilePicture}
+                imgAlt={imgAlt}
+                index={index}
+                colorOne={foo}
+                colorTwo={colorTwo}
+              />
+            );
+          })
       }
     </div>
   </div>
