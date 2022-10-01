@@ -1,8 +1,9 @@
 ---
+import EventItem from "./EventItem.astro";
 ---
 
 <div
-  class="relative mx-auto flex flex-col px-4 sm:max-w-xl md:h-screen md:max-w-screen-xl md:flex-row"
+  class="relative mx-auto flex flex-col px-4 md:px-6 lg:px-8 sm:max-w-xl md:h-screen md:max-w-screen-xl md:flex-row pt-20"
 >
   <!-- Left Column -->
   <div class="mx-auto mt-10 w-full max-w-xl md:mt-36 lg:max-w-screen-xl">
@@ -17,20 +18,7 @@
           Join our club and have some fun!
         </p>
       </div>
-      <div class="flex items-center">
-        <a
-          href="/"
-          class="mr-6 inline-flex h-12 items-center justify-center rounded bg-indigo-600 px-6 font-medium tracking-wide text-white shadow-md outline-none transition duration-200 hover:bg-indigo-400 focus:ring"
-        >
-          Get started
-        </a>
-        <a
-          href="/"
-          aria-label=""
-          class="inline-flex items-center font-semibold text-indigo-600 transition-colors duration-200 hover:text-indigo-400"
-          >Learn more</a
-        >
-      </div>
+      <slot />
     </div>
   </div>
   <!-- /Left Column -->
@@ -54,7 +42,7 @@
           <a href="#" class="relative block">
             <img
               alt=""
-              src="/images/Bm8G0V9ytRbCalT-KOSMT.png"
+              src="https://images.unsplash.com/photo-1587397845856-e6cf49176c70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               class="mx-auto h-10 w-10 rounded-full object-cover"
             />
           </a>
@@ -82,7 +70,7 @@
           <a href="#" class="relative block">
             <img
               alt=""
-              src="/images/y9s3xOJV6rnQPKIrdPYJy.png"
+              src="https://images.unsplash.com/photo-1553514029-1318c9127859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
               class="mx-auto h-10 w-10 rounded-full object-cover"
             />
           </a>
@@ -103,7 +91,7 @@
           <a href="#" class="relative block">
             <img
               alt=""
-              src="/images/x4vs_ucCRWYTU_yLQ6h26.png"
+              src="https://images.unsplash.com/photo-1542327897-d73f4005b533?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               class="mx-auto h-10 w-10 rounded-full object-cover"
             />
           </a>
@@ -138,7 +126,7 @@
           <a href="#" class="relative block">
             <img
               alt=""
-              src="/images/oPf2b7fqx5xa3mo68dYHo.png"
+              src="https://images.unsplash.com/photo-1597071058713-6776461d7737?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
               class="mx-auto h-10 w-10 rounded-full object-cover"
             />
           </a>
@@ -161,7 +149,7 @@
           <a href="#" class="relative block">
             <img
               alt=""
-              src="/images/-ytzjgg6lxK1ICPcNfXho.png"
+              src="https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               class="mx-auto h-10 w-10 rounded-full object-cover"
             />
           </a>
@@ -185,7 +173,7 @@
           <a href="#" class="relative block">
             <img
               alt=""
-              src="/images/Bm8G0V9ytRbCalT-KOSMT.png"
+              src="https://images.unsplash.com/photo-1568782517100-09bf22d88c2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
               class="mx-auto h-10 w-10 rounded-full object-cover"
             />
           </a>
