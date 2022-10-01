@@ -47,8 +47,6 @@ const posts = items.map((item) => {
 <Layout title="Meet the Team">
   <WebsiteLayout client:load>
     <main class="bg-base-100">
-      <div class="lg:h-[72px] w-full bg-black"></div>
-
       <AboutHero />
       <AboutTeam members={posts} />
       <MemberModal client:load members={posts} />
