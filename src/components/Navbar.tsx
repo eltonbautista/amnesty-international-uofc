@@ -21,7 +21,7 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
     <header
       ref={navRef}
       className={`grid justify-items-center fixed bg-black z-50 text-white w-full pb-2 ${
-        scrollPosition > 0 ? "bg-black" : " md:bg-[rgb(0,0,0,0.2)]"
+        scrollPosition > 0 ? "bg-black" : " md:bg-[rgb(0,0,0,0.6)]"
       }`}
     >
       <details className="group transition-all duration-150 h-10 open:h-72 overflow-hidden w-full md:hidden text-sm">
