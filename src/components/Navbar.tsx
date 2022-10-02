@@ -78,11 +78,8 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
 
         <nav className="mt-1.5 ml-8 flex flex-col transition-all duration-500 z-50">
           <NavbarChild link="/" text="Home" />
-          <NavbarChild link="/#about" text="About" />
-          <NavbarChild
-            link="/calgary-web-design-company/web-development"
-            text="Blog"
-          />
+          <NavbarChild link="/about" text="About" />
+          <NavbarChild link="/blogs" text="Blog" />
           {/* <NavbarChild
             link="/calgary-web-design-company/web-development"
             text="Contact"
@@ -118,35 +115,14 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
             <li>
               <a href="/blogs">Blog</a>
             </li>
+            <li>
+              <a href="/events">Events</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
-          <div className="dropdown dropdown-end">
-            <label
-              tabIndex={0}
-              className="btn btn-ghost rounded-btn normal-case font-normal text-base"
-            >
-              Join
-              <svg
-                className="fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content p-2 shadow rounded-box w-64 mt-4 bg-neutral"
-            >
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-              <li>
-                <a href="/events">Events</a>
-              </li>
-            </ul>
-          </div>
+
           <label className="swap swap-rotate p-2" htmlFor="theme">
             <span className="sr-only">theme</span>
             <input

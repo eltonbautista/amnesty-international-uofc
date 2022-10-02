@@ -32,7 +32,7 @@ export default function HomeCTA(props: IHomeCTAProps) {
             imgAlt="freedom"
             imgSrc="https://images.pexels.com/photos/2990644/pexels-photo-2990644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             position="md:ml-0"
-            redirectLink="about"
+            redirectLink="blogs"
             text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis similique, cupiditate eligendi quis, aliquam, reiciendis voluptas quod amet praesentium porro ea nisi consectetur necessitatibus totam incidunt illum quia qui quo.
             "
           />
@@ -41,7 +41,7 @@ export default function HomeCTA(props: IHomeCTAProps) {
             imgAlt="freedom"
             imgSrc="https://images.unsplash.com/photo-1592524138886-f4e3170d5ea7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             position="md:order-2"
-            redirectLink="about"
+            redirectLink="events"
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis similique, cupiditate eligendi quis, aliquam, reiciendis voluptas quod amet praesentium porro ea nisi consectetur necessitatibus totam incidunt illum quia qui quo.
             "
           />

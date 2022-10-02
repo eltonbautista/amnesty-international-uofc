@@ -7,7 +7,7 @@ export interface IHomeCTAChildProps {
   imgSrc: string;
   imgAlt: string;
   position: string;
-  redirectLink: "about" | "blog" | "join";
+  redirectLink: "about" | "blogs" | "events";
 }
 
 export default function HomeCTAChild(props: IHomeCTAChildProps) {
