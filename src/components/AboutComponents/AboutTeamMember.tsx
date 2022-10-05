@@ -35,10 +35,11 @@ export default function AboutTeamMember(props: memberFields) {
       <div
         style={
           {
-            "--my-text-color": `linear-gradient(90deg, ${colorOne} 50%,${colorTwo} 50%)`,
+            // linear-gradient(90deg, ${colorOne} 50%,${colorTwo} 50%)
+            "--my-text-color": `${colorOne}`,
           } as React.CSSProperties
         }
-        className="bg-[image:var(--my-text-color)]"
+        className="transition-colors duration-300 transform cursor-pointer group hover:bg-[color:var(--my-text-color)] rounded-xl ease-in-out"
       >
         <label
           htmlFor={`my-modal-${index}`}
