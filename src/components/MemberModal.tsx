@@ -34,7 +34,6 @@ export default function Test(props: memberFields) {
         body!.style.height = "100%";
         body!.style.overflowY = "hidden";
         setBas(index);
-        console.log(index);
       });
     });
     modalLabel.forEach((label) => {
