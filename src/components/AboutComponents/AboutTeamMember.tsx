@@ -27,8 +27,6 @@ export default function AboutTeamMember(props: memberFields) {
     colorTwo,
   } = props;
 
-  console.log(colorTwo);
-
   const imgSrc = profilePicture?.fields.file.url;
   return (
     <div className="grid my-5 md:my-0">
