@@ -34,17 +34,18 @@ export default function AboutTeamMember(props: memberFields) {
         style={
           {
             // linear-gradient(90deg, ${colorOne} 50%,${colorTwo} 50%)
-            "--my-text-color": `${colorOne}`,
+            "--my-main-color": `${colorOne}`,
+            "--my-secondary-color": `${colorTwo}`,
           } as React.CSSProperties
         }
-        className="transition-colors duration-300 transform cursor-pointer group hover:bg-[color:var(--my-text-color)] rounded-xl ease-in-out"
+        className="transition-colors duration-300 transform cursor-pointer group bg-[color:var(--my-secondary-color)] hover:bg-[color:var(--my-main-color)] rounded-xl ease-in-out"
       >
         <label
           htmlFor={`my-modal-${index}`}
           className="modal-button hover:cursor-pointer "
         >
           <span className="">
-            <img src={imgSrc} alt={imgAlt} width="350px" height="400px" />
+            <img src={imgSrc} alt={imgAlt} width="350px" height="400px" className="opacity-75 hover:opacity-100" />
           </span>
         </label>
       </div>

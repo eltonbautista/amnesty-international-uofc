@@ -1,9 +1,9 @@
 import type React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-export interface INavbarProps {}
+export interface INavbarProps { }
 
-const Navbar: React.FC<INavbarProps> = function Navbar({}) {
+const Navbar: React.FC<INavbarProps> = function Navbar({ }) {
   const navRef = useRef(null);
 
   const [nav, setNav] = useState(false);
@@ -20,21 +20,19 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
   return (
     <header
       ref={navRef}
-      className={`grid justify-items-center fixed bg-black z-50 text-white w-full pb-2 ${
-        scrollPosition > 0 ? "bg-black" : " md:bg-[rgb(0,0,0,0.6)]"
-      }`}
+      className={`grid justify-items-center fixed bg-black z-50 text-white w-full pb-2 ${scrollPosition > 0 ? "bg-black" : " md:bg-[rgb(0,0,0,0.6)]"
+        }`}
     >
       <details className="group transition-all duration-150 h-10 open:h-72 overflow-hidden w-full md:hidden text-sm">
         <summary className="transition-all duration-500  flex cursor-pointer items-center rounded-lg px-4 py-2 ">
           <span className="sm:max-w-[200px] ">
             <img
               className="max-w-full max-h-full sm:block"
-              width="50px"
-              height="50px"
-              src="/images/logo.png"
-              alt="AIUOFC Logo"
+              width="35px"
+              height="35px"
               loading="lazy"
-            ></img>
+              src="/images/ailogo.png"
+              alt="Amnesty International Canada Youth Favicon - Amnesty International Usa@seekpng.com"></img>
           </span>
 
           <span className="ml-auto grid grid-cols-2 gap-7">
@@ -94,11 +92,10 @@ const Navbar: React.FC<INavbarProps> = function Navbar({}) {
             <span className="ml-3 text-xl font-semibold max-w-[250px]">
               <span className="sr-only">AIUOFC Logo</span>
               <img
-                className="max-w-full max-h-full object-cover"
-                width="70px"
-                height="70px"
-                src="/images/logo.png"
-                alt="AIUOFC Logo"
+                src="/images/ailogo.png"
+                alt="Amnesty International Canada Youth Favicon - Amnesty International Usa@seekpng.com"
+                width="50px"
+                height="50px"
                 loading="lazy"
               ></img>
             </span>
