@@ -35,7 +35,12 @@ module.exports = {
     rtl: false,
     prefix: "",
     themes: [
-      "bumblebee",
+      {
+        bumblebee: {
+          ...require("daisyui/src/colors/themes")["[data-theme=bumblebee]"],
+          secondary: "#FDFF28",
+        }
+      },
       "dark",
       "cupcake",
       "light",

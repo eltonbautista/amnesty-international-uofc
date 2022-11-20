@@ -16,7 +16,7 @@ const posts = items.map((item) => {
     slug,
     description,
     date: new Date(date).toLocaleDateString(),
-    image: "https:" + image.fields.file.url,
+    image: image ? "https:" + image.fields.file.url : "",
   };
 });
 ---
