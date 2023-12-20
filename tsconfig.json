@@ -5,8 +5,10 @@
     "pages/**/*",
     "src/**/*", //if it happend in inside src
     "components/**/*", //if it happend inside components
-], "compilerOptions": {
+  ],
+  "compilerOptions": {
     "moduleResolution": "node",
+    "module": "esnext",
     // 👇️ ... rest
   }
 }

@@ -30,6 +30,7 @@
     "@types/marked": "^4.0.7",
     "@types/react": "^18.0.21",
     "markdown-to-jsx": "^7.1.7",
-    "theme-change": "^2.2.0"
+    "theme-change": "^2.2.0",
+    "typescript": "^5.3.3"
   }
 }
