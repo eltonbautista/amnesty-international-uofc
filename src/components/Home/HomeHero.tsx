@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "../Button";
 
-export interface IHomeHeroProps {}
+export interface IHomeHeroProps { }
 
 export default function HomeHero(props: IHomeHeroProps) {
   return (
@@ -50,7 +50,7 @@ export default function HomeHero(props: IHomeHeroProps) {
                 </h2>
               </div>
               <div className="p-4  flex flex-col items-start justify-items-start md:flex-row text-white bg-[rgb(0,0,0,0.4)]">
-                <Button link="/">Join Now</Button>
+                <Button link="https://suuofc.campuslabs.ca/engage/organization/aiuofc">Join Now</Button>
                 <a
                   href="/about"
                   aria-label=""

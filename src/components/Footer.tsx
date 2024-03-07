@@ -147,11 +147,11 @@ export default function Footer(props: IFooterProps) {
               <p className="font-medium">About Us</p>
 
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="about">
                   {" "}
                   About AIUOFC{" "}
                 </a>
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="https://suuofc.campuslabs.ca/engage/organization/aiuofc">
                   {" "}
                   Join Us{" "}
                 </a>
@@ -159,7 +159,7 @@ export default function Footer(props: IFooterProps) {
                   {" "}
                   Contact{" "}
                 </a>
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="https://www.amnesty.ca/ways-to-give/">
                   {" "}
                   Donate{" "}
                 </a>
@@ -170,21 +170,13 @@ export default function Footer(props: IFooterProps) {
               <p className="font-medium">Helpful Links</p>
 
               <nav className="flex flex-col mt-4 space-y-2 text-sm">
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="blog">
                   {" "}
                   Blog{" "}
                 </a>
-                <a className="hover:opacity-75" href="">
-                  {" "}
-                  FAQs{" "}
-                </a>
-                <a className="hover:opacity-75" href="">
+                <a className="hover:opacity-75" href="events">
                   {" "}
                   Volunteering{" "}
-                </a>
-                <a className="hover:opacity-75" href="">
-                  {" "}
-                  Research{" "}
                 </a>
               </nav>
             </div>
