@@ -31,11 +31,9 @@ const posts = items.map((item) => {
 
       <p class="max-w-screen-md md:text-lg">Information is key.</p>
     </div>
-    <!-- /Heading -->
-    <div class="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 xl:gap-16">
+    <div class="grid">
       <!-- Article -->
-      <div class="">
-        <h2>One</h2>
+      <div class="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3 xl:gap-16">
         {
           posts.length > 0 &&
             posts.map((post, index) => {
@@ -53,48 +51,6 @@ const posts = items.map((item) => {
             })
         }
       </div>
-
-      <div class="">
-        <h2>Two</h2>
-        {
-          posts.length > 0 &&
-            posts.map((post, index) => {
-              const { date, title, slug, description, image } = post;
-
-              return (
-                <ArticlePreviewItem
-                  articleDate={date}
-                  articleTitle={title}
-                  articleDescription={description}
-                  articleLink={slug}
-                  articleImgSrc={image}
-                />
-              );
-            })
-        }
-      </div>
-
-      <div class="">
-        <h2>Three</h2>
-        {
-          posts.length > 0 &&
-            posts.map((post, index) => {
-              const { date, title, slug, description, image } = post;
-
-              return (
-                <ArticlePreviewItem
-                  articleDate={date}
-                  articleTitle={title}
-                  articleDescription={description}
-                  articleLink={slug}
-                  articleImgSrc={image}
-                />
-              );
-            })
-        }
-      </div>
-
-      <!-- /Article -->
     </div>
   </div>
 </section>
